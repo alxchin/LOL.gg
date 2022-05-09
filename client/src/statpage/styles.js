@@ -19,6 +19,16 @@ export const ReturnHome = styled.div`
   }
 `;
 
+export const HistoryPage = styled.div`
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+  span{
+    size: 24px;
+    color: #fff;
+  }
+`;
+
 export const Content = styled.div`
   display: flex;
   align-items: center;
@@ -114,3 +124,7 @@ export const WinsLabel = styled.span`
 export const LossesLabel = styled.span`
   color: #d7385e;
 `;
+
+export const Space = styled.div`
+display: inline-block;
+`

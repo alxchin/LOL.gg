@@ -3,9 +3,9 @@ import axios from 'axios'
 import { useParams } from "react-router-dom"
 import {
     Container, Content, HeaderContent, IconSummoner, EloSummoner, SummonerInfo, FooterContent,
-    CircleDiv, WinsLabel, LossesLabel, ReturnHome
+    CircleDiv, WinsLabel, LossesLabel, ReturnHome, HistoryPage, Space,
 } from "./styles";
-import { FaAngleLeft } from 'react-icons/fa';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import iron from "../pics/Emblem_Iron.png"
 import bronze from "../pics/Emblem_Bronze.png"
 import silver from "../pics/Emblem_Silver.png"
@@ -78,7 +78,7 @@ const Stats = () => {
     }
 
     function winRate(playerRank) {
-        return ((playerRank[0][0].wins) / ((playerRank[0][0].losses) + (playerRank[0][0].wins))).toFixed(4) * 100
+        return ((playerRank[0][0].wins) / ((playerRank[0][0].losses) + (playerRank[0][0].wins))).toFixed(1) * 100
     }
 
     function checkElo(elo) {
@@ -141,14 +141,22 @@ const Stats = () => {
                             </CircleDiv>
                         </FooterContent>
                     </Content>
-                    <Link to={`/`}>
-                        <ReturnHome>
-                            <FaAngleLeft size={30} color="#FFF" />
-                            <span> BACK</span>
-                        </ReturnHome>
-                    </Link>
+                    <Space>
+                        <Link to={`/`}>
+                            <ReturnHome>
+                                <FaAngleLeft size={30} color="#FFF" />
+                                <span> BACK</span>
+                            </ReturnHome>
+                        </Link>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        <Link to={`/summoner/${id}/history`}>
+                            <HistoryPage>
+                                <span> MATCH HISTORY</span>
+                                <FaAngleRight size={30} color="#FFF" />
+                            </HistoryPage>
+                        </Link>
+                    </Space>
                 </>
-                )
             </Container >
         )
     }

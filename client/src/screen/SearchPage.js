@@ -5,9 +5,6 @@ import logo from "../pics/logo.png"
 import { Link } from 'react-router-dom'
 
 
-
-
-
 const SearchPage = () => {
     const [summonerName, setSummonerName] = useState('');
 
