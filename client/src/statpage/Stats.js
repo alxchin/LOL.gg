@@ -52,11 +52,11 @@ const Stats = () => {
     }, []);
     console.log(playerRank)
 
-    function checkQueueRank(playerRank) {
-        if (playerRank[0][0].queueType === undefined) {
+    function checkQueueRank(playerRanking) {
+        if (playerRanking === undefined) {
             return ('')
         }
-        else if (playerRank[0][0].queueType === "RANKED_SOLO_5x5") {
+        else if (playerRanking === "RANKED_SOLO_5x5") {
             return playerRank[0][0].rank
         }
         else {
@@ -65,11 +65,11 @@ const Stats = () => {
     }
 
 
-    function checkQueueTier(playerRank) {
-        if (playerRank[0][0].queueType === undefined) {
+    function checkQueueTier(playerRanking) {
+        if (playerRanking === undefined) {
             return ("UNRANKED")
         }
-        else if (playerRank[0][0].queueType === "RANKED_SOLO_5x5") {
+        else if (playerRanking === "RANKED_SOLO_5x5") {
             return playerRank[0][0].tier
         }
         else {
@@ -105,8 +105,8 @@ const Stats = () => {
         }
     }
 
-    if (loaded === "false") {
-        return loaded;
+    if (loaded === false) {
+        return (loaded);
     } else if (loaded && playerData[0] && playerRank[0]) {
         return (
             <Container>
@@ -119,10 +119,10 @@ const Stats = () => {
                                     <strong>{playerData[0].name}</strong> #NA1
                                 </h2>
                                 <h3>
-                                    Level: {playerData[0].summonerLevel} - {checkQueueTier(playerRank)} {checkQueueRank(playerRank)}
+                                    Level: {playerData[0].summonerLevel} - {checkQueueTier(playerRank[0][0].queueType)} {checkQueueRank(playerRank[0][0].queueType)}
                                 </h3>
                             </SummonerInfo>
-                            {checkElo(checkQueueTier(playerRank))}
+                            {checkElo(checkQueueTier(playerRank[0][0].queueType))}
                         </HeaderContent>
                         <FooterContent>
                             <div>

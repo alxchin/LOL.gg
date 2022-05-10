@@ -1,14 +1,7 @@
 import styled from "styled-components";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-export const Header = styled.div`
-display: flex;
-color: #edc988;
-align-items:center;
-flex-direction:column;
-justify-items:center;
-`
+/*
 export const Container = styled.div`
 display:flex;
 align-items:center;
@@ -48,8 +41,9 @@ dispaly:flex;
 justify-content:center;       
 text-align:center; 
 }
-
 `
+*/
+
 export const ReturnHome = styled.div`
   cursor: pointer;
   float: left;
@@ -57,6 +51,7 @@ export const ReturnHome = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
   span{
     size: 24px;
     color: white;;
