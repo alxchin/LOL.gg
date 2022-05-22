@@ -78,7 +78,7 @@ const Stats = () => {
     }
 
     function winRate(playerRank) {
-        return ((playerRank[0][0].wins) / ((playerRank[0][0].losses) + (playerRank[0][0].wins))).toFixed(1) * 100
+        return ((playerRank[0][0].wins) / ((playerRank[0][0].losses) + (playerRank[0][0].wins))).toFixed(3) * 100
     }
 
     function checkElo(elo) {
