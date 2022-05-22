@@ -53,7 +53,7 @@ const PrevGame = () => {
                 <>
                   <h2> Game {index + 1}</h2>
                   <div> {gameData.info.participants.map((data, participantIndex) =>
-                    <p> PLAYER {participantIndex + 1}: {data.summonerName} , KDA: {data.kills} /{data.deaths} / {data.assists} </p>
+                    <p> PLAYER {participantIndex + 1}: {data.summonerName}  </p>
                   )}
                   </div>
                 </>
