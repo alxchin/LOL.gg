@@ -9,7 +9,7 @@ var app = express();
 app.use(cors());
 
 
-const API_KEY = 'RGAPI-f999c7a6-0559-449a-9b32-fbe031764d7a'
+const API_KEY = ''
 
 //---------------------------------GETS PLAYERS INFORMATION (ICONS, NAMES, LEVEL)------------------------//
 function getPlayerName(playerName) {
